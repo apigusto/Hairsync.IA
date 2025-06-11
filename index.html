@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AssistêncIA WebHair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-wrapper">
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1>AssistêncIA WebHair</h1>
+        <p>Como posso te ajudar no agendamento?</p>
+      </header>
+
+      <div class="chat-button-wrapper">
+        <button id="btn-marcar">Marcar</button>
+      </div>
+
+      <iframe
+        class="chat-iframe"
+        src="https://cdn.botpress.cloud/webchat/v2.4/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/17/18/20250517183334-R0DJ0DBO.json"
+        allow="microphone"
+      ></iframe>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-agendamento">
+    <div class="modal-content">
+      <h2>Escolha sua data e horário</h2>
+
+      <input type="text" id="nome-cliente" maxlength="30" placeholder="Seu nome" class="modal-input" />
+      <input type="text" id="servico" maxlength="15" placeholder="Serviço desejado" class="modal-input" />
+
+      <div class="select-wrapper">
+        <select id="dia-select" class="modal-select">
+          <option value="">Selecionar dia</option>
+          <option>Terça-feira</option>
+          <option>Quarta-feira</option>
+          <option>Quinta-feira</option>
+          <option>Sexta-feira</option>
+          <option>Sábado</option>
+        </select>
+      </div>
+
+      <div class="select-wrapper">
+        <select id="hora-select" class="modal-select">
+          <option value="">Selecionar horário</option>
+        </select>
+      </div>
+
+      <div style="margin-top: 20px; display: flex; justify-content: space-between; gap: 10px;">
+        <button class="close-modal" onclick="fecharModal()" style="flex: 1; background: #ccc; color: #333;">Cancelar</button>
+        <button class="close-modal" onclick="confirmarAgendamento()" style="flex: 1; background: #9d4edd; color: white;">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
